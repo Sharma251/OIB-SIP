@@ -1,0 +1,130 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #074f4f, #0fa4a4);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+h2 {
+    color: #33acac;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #e1e5e9;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fbfc;
+}
+
+tr:hover {
+    background-color: #f0f8f8;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 25px;
+        margin: 20px auto;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #e1e5e9;
+        border-radius: 8px;
+        background: white;
+        padding: 15px;
+    }
+
+    td {
+        text-align: left;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #33acac;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 25px 20px;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

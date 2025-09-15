@@ -1,0 +1,121 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #074f4f, #0fa4a4);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #33acac;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f9fbfc;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #3cd3ad;
+    outline: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(to right, #028484, #046969);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(2, 132, 132, 0.7);
+}
+
+/* Error message styling */
+.error-msg {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        margin: 20px auto;
+        padding: 30px 25px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    form input[type="submit"] {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="number"],
+    form select {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

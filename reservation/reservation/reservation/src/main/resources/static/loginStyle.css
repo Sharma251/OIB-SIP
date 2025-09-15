@@ -1,0 +1,138 @@
+/* Reset & base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #074f4f ,#0fa4a4); /* dark teal double shade */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* darker overlay */
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}
+
+/* Login form wrapper */
+.login-wrapper {
+    background-color: #fff; /* dark translucent teal */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+/* Form header */
+.login-form h2 {
+    text-align: center;
+    color: #33acac; /* light teal text */
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.login-form h2 i {
+    margin-right: 8px;
+    color: #2bacac; /* teal accent */
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* dark teal border */
+    border-radius: 8px;
+    background: #f9fbfc; /* very dark teal background */
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.input-group:focus-within {
+    border-color: #3cd3ad; /* teal focus border */
+    box-shadow: 0 0 8px rgba(60, 211, 173, 0.3); /* teal shadow */
+}
+
+.input-group label {
+    color:  #33acac;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+}
+
+/* Error message */
+.error-message {
+    color: #ff6b6b; /* softer red for dark bg */
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: none; /* toggle with JS */
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #046969, #028484); /* dark teal gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #028484, #046969);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(2, 132, 132, 0.7);
+}
+
+/* Extra options */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.extra-options a {
+    color:  #288888;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.extra-options a:hover {
+    color:  #33acac;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .login-wrapper {
+        margin: 0 15px;
+        padding: 30px 20px;
+    }
+    .login-form h2 {
+        font-size: 20px;
+    }
+}

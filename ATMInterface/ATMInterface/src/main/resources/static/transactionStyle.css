@@ -1,0 +1,62 @@
+@charset "UTF-8";
+body {
+            font-family: Arial, sans-serif;
+            background-color: #06406a;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #06406a;
+        }
+        .balance {
+            text-align: center;
+            font-size: 18px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .withdraw {
+            color: #dc3545;
+        }
+        .deposit {
+            color: #28a745;
+        }
+        .transfer {
+            color: #ffc107;
+        }
+        .back {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        .no-transactions {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            margin: 20px 0;
+        }

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #074f4f, #0fa4a4);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    width: 400px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #33acac;
+    font-size: 28px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.actions a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.actions a:hover {
+    background: linear-gradient(to right, #028484, #046969);
+}

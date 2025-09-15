@@ -1,0 +1,91 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #074f4f, #0fa4a4);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-card {
+    text-align: center;
+}
+
+h2 {
+    color: #33acac;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.success-msg {
+    color: #33acac;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    width: 40%;
+}
+
+table td {
+    padding: 12px 15px;
+    border: 1px solid #e1e5e9;
+    background-color: #f9fbfc;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #028484, #046969);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}

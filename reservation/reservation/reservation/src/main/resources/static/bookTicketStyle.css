@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base layout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #074f4f, #0fa4a4);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+h2 {
+    color: #33acac;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Form styling */
+.ticket-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-form label {
+    font-weight: bold;
+    margin: 15px 0 8px;
+    color: #555;
+}
+
+.ticket-form input,
+.ticket-form select {
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f9fbfc;
+    transition: border-color 0.3s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+    outline: none;
+    border-color: #3cd3ad;
+}
+
+.ticket-form input[readonly] {
+    background-color: #f1f1f1;
+}
+
+.ticket-form button {
+    margin-top: 25px;
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(to right, #046969, #028484);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ticket-form button:hover {
+    background: linear-gradient(to right, #028484, #046969);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(2, 132, 132, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 25px;
+        margin: 20px auto;
+    }
+
+    .ticket-form {
+        font-size: 15px;
+    }
+
+    .ticket-form label {
+        margin-top: 12px;
+    }
+
+    .ticket-form input,
+    .ticket-form select {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .ticket-form button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px 20px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .ticket-form input,
+    .ticket-form select,
+    .ticket-form button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+@import url('adminDashboard.css');
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.grid label{display:flex;flex-direction:column;font-size:14px;color:var(--muted)}
+.grid input{margin-top:6px;padding:12px;border-radius:10px;border:1px solid var(--border);background:#0b1220;color:var(--text)}
+.full{grid-column:1/-1}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}

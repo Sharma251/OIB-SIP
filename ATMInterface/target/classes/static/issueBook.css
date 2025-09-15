@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import url('addBook.css');
+textarea{
+	margin-top:6px;
+	padding:12px;
+	border-radius:10px;
+	border:1px solid var(--border);
+	background:#0b1220;
+	color:var(--text);
+	resize:vertical
+}
+.issued-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+.issued-card p {
+  margin: 10px 0;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+.issued-card strong {
+  color: #94a3b8;
+}
