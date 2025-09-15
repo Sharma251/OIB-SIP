@@ -46,11 +46,13 @@ public class ExamController {
         List<Question> questions = examService.getQuestionsForExam(examId);
 
         long remainingSeconds = Duration.between(now, exam.getEndTime()).toSeconds();
+        long totalSeconds = Duration.between(exam.getStartTime(), exam.getEndTime()).toSeconds();
         model.addAttribute("exam", exam);
         model.addAttribute("examId", examId);
         model.addAttribute("examTitle", exam.getTitle());
         model.addAttribute("questions", questions);
         model.addAttribute("duration", remainingSeconds);
+        model.addAttribute("totalDuration", totalSeconds);
 
         return "exam"; // exam.jsp
     }

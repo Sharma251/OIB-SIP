@@ -11,8 +11,8 @@ INSERT INTO user_roles (user_id, role_id) VALUES
 (3, 2); -- student2
 
 INSERT INTO exams (title, description, start_time, end_time) VALUES
-('Java Basics Exam', 'Test your knowledge of Java fundamentals', '2025-09-15 14:00:00', '2025-09-15 16:00:00'),
-('Spring Boot Exam', 'Advanced Spring Boot concepts', '2025-09-16 14:00:00', '2025-09-16 16:00:00');
+('Java Basics Exam', 'Test your knowledge of Java fundamentals', '2024-09-15 14:00:00', '2024-09-15 16:00:00'),
+('Spring Boot Exam', 'Advanced Spring Boot concepts', '2024-09-16 14:00:00', '2024-09-16 16:00:00');
 
 INSERT INTO questions (text, exam_id) VALUES
 ('What is Java?', 1),
