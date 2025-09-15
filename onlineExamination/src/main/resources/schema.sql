@@ -1,0 +1,63 @@
+
+DROP TABLE IF EXISTS attempt_answers;
+DROP TABLE IF EXISTS user_roles;
+DROP TABLE IF EXISTS attempts;
+DROP TABLE IF EXISTS options;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS exams;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS roles;
+
+CREATE TABLE roles (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE users (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE user_roles (
+    user_id BIGINT NOT NULL,
+    role_id BIGINT NOT NULL,
+    PRIMARY KEY (user_id, role_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
+);
+
+CREATE TABLE exams (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    start_time DATETIME,
+    end_time DATETIME
+);
+
+CREATE TABLE questions (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    exam_id BIGINT NOT NULL,
+    text TEXT NOT NULL,
+    FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE
+);
+
+CREATE TABLE options (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    question_id BIGINT NOT NULL,
+    option_text TEXT NOT NULL,
+    is_correct BOOLEAN NOT NULL,
+    FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE
+);
+
+CREATE TABLE attempts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    exam_id BIGINT NOT NULL,
+    score INT,
+    attempt_time DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE
+);
